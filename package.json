@@ -12,6 +12,10 @@
   ],
   "author": "'Rafael <'rafa@myariadna.com'>",
   "license": "CC-BY-NC-ND-4.0",
+  "bugs": {
+    "url": "https://github.com/rafaelgr/AriGesInvNode/issues"
+  },
+  "homepage": "https://github.com/rafaelgr/AriGesInvNode#readme",
   "dependencies": {
     "async": "^1.4.2",
     "body-parser": "^1.14.0",

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>AriGes INV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--<link href="Content/jquery.mobile-1.4.5.css" rel="stylesheet" />-->
+        <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+        <link href="css/ariges-inv-web.css" rel="stylesheet" />
+
+        <script src="Scripts/jquery-1.8.3.js"></script>
+        <script src="Scripts/jquery.mobile-1.4.5.js"></script>
+        <script src="Scripts/jquery.validate.js"></script>
+        <script src="js/numeral.min.js"></script>
+
+    </head>
+    <body>
+        <!-- pgInv -->
+        <div data-role="page" id="pgInv" data-theme="b">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <a href="index.html" rel="external" data-icon="home">Inicio</a>
+                <h1>AriGes INV</h1>
+                <a href="inventario.html" data-icon="refresh">Recargar</a>
+            </div>
+            <div data-role="content" data-theme="b">
+                <form id="frmEan">
+                    <div data-role="fieldcontainer">
+                        <label for="ean">Código de barras:</label>
+                        <input type="text" id="txtEan" name="ean"/>
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <input id="btnEan" name="buscar" type="button" data-icon="search" value="BUSCAR" />
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer" data-theme="b">
+                <h5>
+                    <i>&copy; Ariadna Software 2015</i>
+                </h5>
+            </div>
+        </div>
+        <!-- FIN pgInv -->
+        <!-- pgArt -->
+        <div data-role="page" id="pgArt" data-theme="b">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <a href="index.html" rel="external" data-icon="home">Inicio</a>
+                <h1>AriGes INV</h1>
+                <a href="#pgInv" data-icon="arrow-l">Atrás</a>
+            </div>
+            <div data-role="content" data-theme="b">
+                <form id="frmArt">
+                    <div>
+                        <h2 id="txtNombre">NO HA SELECCIONADO ARTÍCULO</h2>
+                    </div>
+                    <div data-role="fieldset">
+                        <label for="almacenes">Almacén</label>
+                        <select name="almacenes" id="almacenes">
+                            <option value="1" selected="selected">NO ALMACEN</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldset">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <b>STOCK: </b><span id="txtStock">0</span>
+                            </div>
+                            <div class="ui-block-b">
+                                <b>PVP (con iva): </b><span id="txtPrecio">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div data-role="fieldset">
+                        <label for="cantidad">STOCK REAL:</label>
+                        <input id="txtCantidad" name="cantidad" type="text"/>
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <input id="btnActStock" name="actStock" type="button" data-icon="gear" value="Actualizar STOCK" />
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer" data-theme="b">
+                <h5>
+                    <i>&copy; Ariadna Software 2015</i>
+                </h5>
+            </div>
+        </div>
+        <!-- FIN pgArt -->
+
+        <!-- pgMsg -->
+        <div data-role="page" id="pgMsg" data-theme="b">
+            <div data-role="header" data-theme="b">
+                <h1>Mensaje</h1>
+            </div>
+            <div data-role="content" data-theme="b" style="text-align:center; color:red;" >
+                <p id="txtMsg"></p>
+                <div>
+                    <input type="button" id="btnMsg" value="ACEPTAR"/>
+                </div>
+            </div>
+        </div>
+        <!-- FIN pgMsg -->
+        <script>
+            $("#btnMsg").click(function () {
+                $('#txtMsg').css('color', 'red');
+                $.mobile.changePage("#pgInv");
+            });
+        </script>
+        <script src="js/ariges-inv-web.js"></script>
+        <script src="js/inventario.js"></script>
+    </body>
+</html>

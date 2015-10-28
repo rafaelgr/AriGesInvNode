@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>AriGes INV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--<link href="Content/jquery.mobile-1.4.5.css" rel="stylesheet" />-->
+        <link href="css/ariges-inv-web.css" rel="stylesheet" />
+        <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+
+        <script src="Scripts/jquery-1.8.3.js"></script>
+        <script src="Scripts/jquery.mobile-1.4.5.js"></script>
+        <script src="Scripts/jquery.validate.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="pgLogin" data-theme="b">
+            <div data-role="header" data-position="fixed"  data-theme="b">
+                <a href="#" data-icon="home">Inicio</a>
+                <h1>AriGes INV</h1>
+                <a href="index.html" data-icon="refresh">Recargar</a>
+            </div>
+            <div data-role="content"  data-theme="b">
+                <p>Introduzca su login y contraseña para acceder a la aplicación</p>
+                <form id="frmLogin">
+                    <div data-role="fieldcontainer">
+                        <label for="login">Login</label>
+                        <input id="txtLogin" name="login" type="text" />
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <label for="password">Contraseña</label>
+                        <input id="txtPassword" name="password" type="password" />
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <input id="btnLogin" name="entrar" type="button" data-icon="check" value="ENTRAR" />
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer"  data-theme="b">
+                <h5>
+                    <i>&copy; Ariadna Software 2015</i>
+                </h5>
+            </div>
+        </div>
+        <div data-role="page" id="pgMsg"  data-theme="b">
+            <div data-role="header"  data-theme="b">
+                <h1>Mensaje</h1>
+            </div>
+            <div data-role="content"  data-theme="b" style="text-align:center; color:red;">
+                <p id="txtMsg"></p>
+                <div>
+                    <input type="button" id="btnMsg" value="ACEPTAR"/>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#btnMsg").click(function () {
+                $('#txtLogin').val('');
+                $('#txtPassword').val('');
+                $.mobile.changePage("#pgLogin");
+            });
+        </script>
+        <script src="js/ariges-inv-web.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
