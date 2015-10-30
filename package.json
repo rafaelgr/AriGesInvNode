@@ -1,6 +1,6 @@
 {
   "name": "ariges_inv_node",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Toma de inventarios para la aplicación AriGes",
   "main": "index.js",
   "scripts": {

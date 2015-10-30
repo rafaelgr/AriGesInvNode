@@ -120,7 +120,7 @@ var InvetarioApp = {};
                                     }
                                     // cargamos los valores del desplegable (por defecto seleccionado el 0)
                                     $almacenes.html(alHtml);
-                                    $("#almacenes").selectmenu("refresh");
+
 
                                     /*
                                     var option = ""
@@ -148,6 +148,10 @@ var InvetarioApp = {};
                                     importe = datos[0].PrecioUc;
                                     // mostramos la página
                                     $.mobile.changePage('#pgArt');
+                                    if ($("#almacenes")) {
+                                        $("#almacenes").selectmenu("refresh");
+                                    }
+
                                 }
                             },
                             error: function(xhr, textStatus, errorThrwon) {
