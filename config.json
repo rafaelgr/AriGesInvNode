@@ -1,4 +1,4 @@
 {
-    "apiPort": 9000,
+    "apiPort": 8099,
     "apiHost": "localhost"
 }

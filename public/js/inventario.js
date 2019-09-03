@@ -48,8 +48,8 @@ var InvetarioApp = {};
             // los datos correspondientes
             for (var i = 0; i < datos.length; i++) {
                 if (datos[i].CodigoAlmacen == $almacenes.val()) {
-                    $stock.text(numeral(datos[i].Stock).format('#,###,##0.00'));
-                    $precio.text(numeral(datos[i].PrecioConIva).format('#,###,##0.00'));
+                    $stock.text(numeral(parseFloat(datos[i].Stock)).format('#,###,##0.00'));
+                    $precio.text(numeral(parseFloat(datos[i].PrecioConIva)).format('#,###,##0.00'));
                     codAlmac = datos[i].CodigoAlmacen;
                     stock = datos[i].Stock;
                     articulo = datos[i];
@@ -140,8 +140,8 @@ var InvetarioApp = {};
 
                                     // los valores a los campos correspondientes
                                     $nombre.text(datos[0].NombreArticulo);
-                                    $stock.text(numeral(datos[0].Stock).format('#,###,##0.00'));
-                                    $precio.text(numeral(datos[0].PrecioConIva).format('#,###,##0.00'));
+                                    $stock.text(numeral(parseFloat(datos[0].Stock)).format('#,###,##0.00'));
+                                    $precio.text(numeral(parseFloat(datos[0].PrecioConIva)).format('#,###,##0.00'));
                                     codArtic = datos[0].CodigoArticulo;
                                     stock = datos[0].Stock;
                                     codAlmac = datos[0].CodigoAlmacen;

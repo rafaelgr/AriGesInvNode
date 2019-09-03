@@ -60,5 +60,5 @@ app.use('/api/inventario', inventario_router);
 app.listen(config.apiPort);
 
 // -- console message
-console.log('SGUARD API / SERVER on port: ' + config.apiPort);
+console.log('ARIGES INVENTARIO API / SERVER on port: ' + config.apiPort);
 

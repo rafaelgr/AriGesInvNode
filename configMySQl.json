@@ -1,9 +1,9 @@
 {
-    "host": "192.168.1.10",
+    "host": "mysql01.ariadnasw.com",
     "user": "root",
     "password": "aritel",
     "database_usuarios": "usuarios",
-    "database_ariges": "ariges99",
-    "database_conta": "conta1",
+    "database_ariges": "ariges1",
+    "database_conta": "ariconta1",
     "port": 3306
 }
