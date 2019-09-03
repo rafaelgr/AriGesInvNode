@@ -93,6 +93,7 @@ var InvetarioApp = {};
                             contentType: "application/json",
                             data: JSON.stringify(data),
                             success: function(data, status) {
+                                $ean.val('');
                                 // Regresa el mensaje
                                 if (!data) {
                                     // 
@@ -210,6 +211,7 @@ var InvetarioApp = {};
                 contentType: "application/json",
                 data: JSON.stringify(data),
                 success: function(data, status) {
+                    $cantidad.val('');
                     // Regresa el mensaje
                     if (!data) {
                         // mostrarMensaje('Login y/o password incorrectos');
